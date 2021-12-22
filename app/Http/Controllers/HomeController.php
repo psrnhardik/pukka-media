@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use File;
+
+class HomeController extends Controller{
+    public function index(Request $request){
+        return view('index');
+    }
+
+    public function contact(Request $request){
+        return view('contact');
+    }
+    
+    public function contactus(ContactRequest $request){
+        $input = $request->all();
+        unset($input['_token']);
+        unset($input['_method']);
+
+        $input['file_name'] = '';
+        if (!empty($request->file('image'))) {
+            $file = $request->file('image');
+            $filenameWithExtension = $request->file('image')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExtension, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $filenameToStore = time()."_".$filename.'.'.$extension;
+
+            $folder_to_upload = public_path().'/uploads/image/';
+
+            if (!\File::exists($folder_to_upload))
+                \File::makeDirectory($folder_to_upload, 0777, true, true);
+
+            if (!empty($request->file('image')))
+                $file->move($folder_to_upload, $filenameToStore);
+
+            $input['file_name'] = URL('/uploads/image').'/'.$filenameToStore;
+        }
+
+        return view('process', ['data' => $input]);
+    }
+}
