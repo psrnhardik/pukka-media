@@ -44,4 +44,3 @@ Route::get('command/seed', function() {
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('contact', 'HomeController@contact')->name('contact');
 Route::post('contactus', 'HomeController@contactus')->name('contactus');
-Route::post('remove_image', 'HomeController@remove_image')->name('remove_image');

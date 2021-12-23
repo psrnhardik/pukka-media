@@ -26,6 +26,17 @@ class HomeController extends Controller{
         $input['file_name'] = '';
         $input['image'] = '';
 
+        $crud = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'website' => $request->website,
+            'address' => $request->address,
+            'p_name' => $request->p_name,
+            'p_email' => $request->p_email,
+            'p_phone' => $request->p_phone
+        ];
+
         if (!empty($request->file('image'))) {
             $file = $request->file('image');
             $filenameWithExtension = $request->file('image')->getClientOriginalName();
@@ -43,6 +54,8 @@ class HomeController extends Controller{
 
             $input['file_name'] = URL('/uploads/image').'/'.$filenameToStore;
             $input['image'] = $filenameToStore;
+
+            $crud['image'] = $filenameToStore;
         }
 
         $ip = $request->ip();
@@ -56,24 +69,12 @@ class HomeController extends Controller{
             $input['download'] = true;
         }
 
-        $p_name = $request->p_name;
-        $p_email = $request->p_email;
-        $p_phone = $request->p_phone;
-        $contact = Contact::select('name', 'email', 'phone')->where(['name' => $p_name, 'email' => $p_email, 'phone' => $p_phone])->first();
+        $contact = Contact::where(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone])->first();
 
         if(!$contact){
-            Contact::create(['name' => $p_name, 'email' => $p_email, 'phone' => $p_phone]);
+            Contact::create($crud);
         }
 
         return view('process', ['data' => $input]);
-    }
-
-    public function remove_image(Request $request){
-        $path = public_path().'/uploads/image/'.$request->image;
-
-        if(\File::delete($path))
-            return response()->json(['code' => 200]);
-        else
-            return response()->json(['code' => 201]);
     }
 }
