@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
-use File;
+use App\Models\IpAddress;
+use Illuminate\Support\Str;
+use File, URL;
 
 class HomeController extends Controller{
     public function index(Request $request){
@@ -21,6 +23,8 @@ class HomeController extends Controller{
         unset($input['_method']);
 
         $input['file_name'] = '';
+        $input['image'] = '';
+
         if (!empty($request->file('image'))) {
             $file = $request->file('image');
             $filenameWithExtension = $request->file('image')->getClientOriginalName();
@@ -37,8 +41,29 @@ class HomeController extends Controller{
                 $file->move($folder_to_upload, $filenameToStore);
 
             $input['file_name'] = URL('/uploads/image').'/'.$filenameToStore;
+            $input['image'] = $filenameToStore;
+        }
+
+        $ip = $request->ip();
+
+        $ip_result = IpAddress::select('ip_address')->where(['ip_address' => $ip])->first();
+
+        if($ip_result){
+            $input['download'] = false;
+        }else{
+            IpAddress::create(['ip_address' => $ip]);
+            $input['download'] = true;
         }
 
         return view('process', ['data' => $input]);
+    }
+
+    public function remove_image(Request $request){
+        $path = public_path().'/uploads/image/'.$request->image;
+
+        if(\File::delete($path))
+            return response()->json(['code' => 200]);
+        else
+            return response()->json(['code' => 201]);
     }
 }
