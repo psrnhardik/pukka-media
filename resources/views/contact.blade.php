@@ -114,27 +114,27 @@
 
             <div class="row">
                 <div class="form-group col-sm-6">
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Business / Organizaton Name *" value="{{ @old('name') }}">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Business Name *" value="{{ @old('name') }}">
                     <span class="kt-form__help error name"></span>
                 </div>
                 <div class="form-group col-sm-6">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Business / Organizaton email *" value="{{ @old('email') }}">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Business email *" value="{{ @old('email') }}">
                     <span class="kt-form__help error email"></span>
                 </div>
                 <div class="form-group col-sm-6">
-                    <input type="text" name="phone" id="phone" class="form-control phone" placeholder="Business / Organizaton phone number *" value="{{ @old('phone') }}">
+                    <input type="text" name="phone" id="phone" class="form-control phone" placeholder="Business phone number *" value="{{ @old('phone') }}">
                     <span class="kt-form__help error phone"></span>
                 </div>
                 <div class="form-group col-sm-6">
-                    <input type="text" name="website" id="website" class="form-control" placeholder="Business / Organizaton website *" value="{{ @old('website') }}">
+                    <input type="text" name="website" id="website" class="form-control" placeholder="Business website *" value="{{ @old('website') }}">
                     <span class="kt-form__help error website"></span>
                 </div>
                 <div class="form-group col-sm-12">
-                    <input type="file" name="image" id="image" class="form-control" placeholder="Business / Organizaton Logo JPG / PNG *">
+                    <input type="file" name="image" id="image" class="form-control" placeholder="Business Logo JPG / PNG *">
                     <span class="kt-form__help error image"></span>
                 </div>
                 <div class="form-group col-sm-12">
-                    <textarea name="address" class="form-control" placeholder="Business / Organizaton Address *"></textarea>
+                    <textarea name="address" class="form-control" placeholder="Business Address *"></textarea>
                     <span class="kt-form__help error address"></span>
                 </div>
             
@@ -149,7 +149,7 @@
                     <span class="kt-form__help error p_email"></span>
                 </div>
                 <div class="form-group col-sm-6">
-                    <input type="text" name="p_phone" id="p_phone" class="form-control phone" placeholder="Personal phone number *" value="{{ @old('p_phone') }}">
+                    <input type="text" name="p_phone" id="p_phone" class="form-control phone" placeholder="Mobile number *" value="{{ @old('p_phone') }}">
                     <span class="kt-form__help error p_phone"></span>
                 </div>
                 

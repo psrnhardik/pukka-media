@@ -99,7 +99,7 @@
                 <text id="mail" class="cls-1" transform="translate(376.37 593.77)">mustansir.makda@gmail.com</text>
                 <text id="address" class="cls-1" transform="translate(208.92 615.77)">247, Jasal Complex, Nanavati Chowk, 150ft RingRoad 360006</text>
                 <text class="cls-16" transform="translate(261.11 557.27)">Merry Christmas</text>
-                <text id="bussiness_name" class="cls-16" transform="translate(269.27 517.27)">Business Name</text>
+                <text id="bussiness_name" class="cls-16" style="text-align:center" transform="translate(269.27 517.27)">Business Name</text>
             </g>
         </svg>
     </div>
