@@ -220,9 +220,9 @@
                     </div>
                     <div class="col-sm-6 text-center">
                         
-                        @if($data['download'])
+                        <!-- @if($data['download'])
                             <button class="btn btn-danger download" id="svg-two-button" onClick="downloadSVG('svg-two')">Download</button>
-                        @endif
+                        @endif -->
                     </div>
                 </div>
             </div>
