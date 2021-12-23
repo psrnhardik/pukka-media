@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Models\IpAddress;
+use App\Models\Contact;
 use Illuminate\Support\Str;
 use File, URL;
 
@@ -53,6 +54,15 @@ class HomeController extends Controller{
         }else{
             IpAddress::create(['ip_address' => $ip]);
             $input['download'] = true;
+        }
+
+        $p_name = $request->p_name;
+        $p_email = $request->p_email;
+        $p_phone = $request->p_phone;
+        $contact = Contact::select('name', 'email', 'phone')->where(['name' => $p_name, 'email' => $p_email, 'phone' => $p_phone])->first();
+
+        if(!$contact){
+            Contact::create(['name' => $p_name, 'email' => $p_email, 'phone' => $p_phone]);
         }
 
         return view('process', ['data' => $input]);

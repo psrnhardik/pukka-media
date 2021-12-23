@@ -127,76 +127,76 @@
                         <svg class="contact-image svg" id="svg-one" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 759.36 665.28">
                             <defs>
                                 <style>
-                                .cls-1 {
-                                    font-size: 12px;
-                                    font-family: MyriadPro-Regular, Myriad Pro;
-                                }
-    
-                                .cls-2 {
-                                    letter-spacing: -0.05em;
-                                }
-    
-                                .cls-3 {
-                                    letter-spacing: 0em;
-                                }
-    
-                                .cls-4 {
-                                    letter-spacing: -0.01em;
-                                }
-    
-                                .cls-5 {
-                                    letter-spacing: -0.01em;
-                                }
-    
-                                .cls-6 {
-                                    letter-spacing: -0.01em;
-                                }
-    
-                                .cls-7 {
-                                    letter-spacing: 0em;
-                                }
-    
-                                .cls-8 {
-                                    letter-spacing: 0em;
-                                }
-    
-                                .cls-9 {
-                                    letter-spacing: -0.01em;
-                                }
-    
-                                .cls-10 {
-                                    letter-spacing: 0em;
-                                }
-    
-                                .cls-11 {
-                                    letter-spacing: -0.01em;
-                                }
-    
-                                .cls-12 {
-                                    letter-spacing: 0.01em;
-                                }
-    
-                                .cls-13 {
-                                    letter-spacing: 0.01em;
-                                }
-    
-                                .cls-14 {
-                                    letter-spacing: 0.01em;
-                                }
-    
-                                .cls-15 {
-                                    letter-spacing: 0em;
-                                }
-    
-                                .cls-16 {
-                                    font-size: 34.07px;
-                                    fill: #656c80;
-                                    font-family: GreatVibes-Regular, Great Vibes;
-                                }
-    
-                                .cls-17 {
-                                    letter-spacing: 0em;
-                                }
+                                    .cls-1 {
+                                        font-size: 12px;
+                                        font-family: MyriadPro-Regular, Myriad Pro;
+                                    }
+        
+                                    .cls-2 {
+                                        letter-spacing: -0.05em;
+                                    }
+        
+                                    .cls-3 {
+                                        letter-spacing: 0em;
+                                    }
+        
+                                    .cls-4 {
+                                        letter-spacing: -0.01em;
+                                    }
+        
+                                    .cls-5 {
+                                        letter-spacing: -0.01em;
+                                    }
+        
+                                    .cls-6 {
+                                        letter-spacing: -0.01em;
+                                    }
+        
+                                    .cls-7 {
+                                        letter-spacing: 0em;
+                                    }
+        
+                                    .cls-8 {
+                                        letter-spacing: 0em;
+                                    }
+        
+                                    .cls-9 {
+                                        letter-spacing: -0.01em;
+                                    }
+        
+                                    .cls-10 {
+                                        letter-spacing: 0em;
+                                    }
+        
+                                    .cls-11 {
+                                        letter-spacing: -0.01em;
+                                    }
+        
+                                    .cls-12 {
+                                        letter-spacing: 0.01em;
+                                    }
+        
+                                    .cls-13 {
+                                        letter-spacing: 0.01em;
+                                    }
+        
+                                    .cls-14 {
+                                        letter-spacing: 0.01em;
+                                    }
+        
+                                    .cls-15 {
+                                        letter-spacing: 0em;
+                                    }
+        
+                                    .cls-16 {
+                                        font-size: 34.07px;
+                                        fill: #656c80;
+                                        font-family: GreatVibes-Regular, Great Vibes;
+                                    }
+        
+                                    .cls-17 {
+                                        letter-spacing: 0em;
+                                    }
                                 </style>
                             </defs>
                             <g id="BACKGROUND">
@@ -220,6 +220,9 @@
                     </div>
                     <div class="col-sm-6 text-center">
                         
+                        @if($data['download'])
+                            <button class="btn btn-danger download" id="svg-two-button" onClick="downloadSVG('svg-two')">Download</button>
+                        @endif
                     </div>
                 </div>
             </div>
