@@ -54,7 +54,7 @@
                     <h1>
                         <p style="color:white; font-size: 60px; margin:0px; font-family: Pacifico;">We are Pukka Media</p>
                     </h1>
-                    <a href="{{ route('contact') }}" type="button" class="btn btn-outline-light btn-lg" style="margin-top: 1%;">Get a FREE Diwali Image</a>
+                    <a href="{{ route('contact') }}" type="button" class="btn btn-outline-light btn-lg" style="margin-top: 1%;">Get a FREE Christmas Image</a>
                 </div>
             </center>
         </div>
