@@ -99,6 +99,11 @@
         #my-svg{
             height:auto !important;
             width:auto !important; 
+            position:relative; width:100px; height:400px;
+            margin:0 auto
+        }
+        svg {
+            position:absolute; 
         }
     </style>
 </head>
