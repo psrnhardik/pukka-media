@@ -16,7 +16,7 @@
 
         body {
             background-image: url("{{ asset('assets/images/bg.jpg') }}");
-            background-color: #cccccc;
+            background-color: #ccc;
         }
 
         .contact-form {
@@ -96,11 +96,17 @@
             font-weight: 500;
             /* margin-left: 14px; */
         }
-        #my-svg{
-            height:auto !important;
-            width:auto !important; 
-            position:relative; width:100px; height:400px;
-            margin:0 auto
+        
+        @media only screen and (max-width: 500px) {
+            #my-svg {
+                width:'496.36px';
+                height:'397.28px';
+            }
+        }
+
+        #my-svg {
+            position:relative;
+            margin:0 auto;
         }
         svg {
             position:absolute; 
@@ -117,7 +123,7 @@
             <div class="form-group col-lg-12">
                 <h1 class="text-center">Download Your Image</h1>
                 <div class="text-center">
-                    <svg class="contact-image" id="my-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="759.36" height="665.28" viewBox="0 0 759.36 665.28">
+                    <svg class="contact-image" id="my-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 759.36 665.28">
                         <defs>
                             <style>
                             .cls-1 {
@@ -204,7 +210,7 @@
                             <text id="mail" class="cls-1" transform="translate(376.37 593.77)">mustansir.makda@gmail.com</text>
                             <text id="address" class="cls-1" transform="translate(208.92 615.77)">247, Jasal Complex, Nanavati Chowk, 150ft RingRoad 360006</text>
                             <text class="cls-16" transform="translate(261.11 557.27)">Merry Christmas</text>
-                            <text id="bussiness_name" class="cls-16" style="text-align:center" transform="translate(269.27 517.27)">Business Name</text>
+                            <text id="bussiness_name" class="cls-16" transform="translate(269.27 517.27)">Business Name</text>
                         </g>
                     </svg>
                     
@@ -232,12 +238,15 @@
             $("#container").removeAttr("onClick");
 
             var svg = document.querySelector('#my-svg');
+            svg.setAttribute('width','1000px');
+            svg.setAttribute('height','1000px');
             var data = (new XMLSerializer()).serializeToString(svg);
             var canvas = document.createElement('canvas');
             canvg(canvas, data, {
                 renderCallback: function() {
                     canvas.toBlob(function(blob) {
-                        download('MyImageName.png', blob);
+                        download('MyImageName.png', blob)
+                        location.reload();
                     });
                 }
             });
@@ -246,6 +255,11 @@
         function download(filename, blob) {
             if (window.navigator.msSaveOrOpenBlob) {
                 window.navigator.msSaveBlob(blob, filename);
+                var svg = document.querySelector('#my-svg');
+                svg.setAttribute('viewBox','0 0 759.36 665.28');
+                svg.setAttribute('width','3164');
+                svg.setAttribute('height','2772')
+                svg.setAttribute('transform','scale(0.24)')
             } else {
                 const elem = window.document.createElement('a');
                 elem.href = window.URL.createObjectURL(blob);
@@ -253,6 +267,11 @@
                 document.body.appendChild(elem);
                 elem.click();
                 document.body.removeChild(elem);
+                var svg = document.querySelector('#my-svg');
+                svg.setAttribute('viewBox','0 0 759.36 665.28');
+                svg.setAttribute('width','3164');
+                svg.setAttribute('height','2772')
+                svg.setAttribute('transform','scale(0.24)')
             }
         }
     </script>
