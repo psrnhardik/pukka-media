@@ -58,22 +58,23 @@ class HomeController extends Controller{
             $crud['image'] = $filenameToStore;
         }
 
-        $ip = $request->ip();
+        // $ip = $request->ip();
 
-        $ip_result = IpAddress::select('ip_address')->where(['ip_address' => $ip])->first();
+        // $ip_result = IpAddress::select('ip_address')->where(['ip_address' => $ip])->first();
 
-        if($ip_result){
-            $input['download'] = false;
-        }else{
-            IpAddress::create(['ip_address' => $ip]);
-            $input['download'] = true;
-        }
+        // if($ip_result){
+        //     $input['download'] = false;
+        // }else{
+        //     IpAddress::create(['ip_address' => $ip]);
+        //     $input['download'] = true;
+        // }
+        $input['download'] = true;
 
-        $contact = Contact::where(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone])->first();
+        // $contact = Contact::where(['name' => $request->name, 'email' => $request->email, 'phone' => $request->phone])->first();
 
-        if(!$contact){
+        // if(!$contact){
             Contact::create($crud);
-        }
+        // }
 
         return view('process', ['data' => $input]);
     }
