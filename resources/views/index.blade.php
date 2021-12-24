@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Helvetica Neue|Lucida Grande|Arial|Verdana|sans-serif">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
 
     <title>Pukka Media</title>
 
@@ -133,7 +133,7 @@
                 <div style="z-index: 10;">
                     <img src="{{ asset('assets/images/logo.png') }}" alt="Pukka Media" style="height: 300px; width:auto; filter: invert(100%);margin-bottom: -3%;margin-top: 10%; position: relative;" />
                     <h1>
-                        <p style="color:white; font-size: 60px; margin:0px; font-family: Pacifico;">We are Pukka Media</p>
+                        <p style="color:white; font-size: 60px; margin:0px; font-family: Pacifico !importent;">We are Pukka Media</p>
                     </h1>
                     <a href="{{ route('contact') }}" type="button" class="button" style="margin-top: 1%;">Get a FREE Christmas Image</a>
                 </div>
