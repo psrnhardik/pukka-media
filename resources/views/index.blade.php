@@ -15,7 +15,9 @@
             margin: 0;
             padding: 0;
         }
-
+        a:hover {
+            color: #fff;
+        }
         .outsideWrapper {
             width: 100%;
             height: 100%;
