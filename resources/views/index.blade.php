@@ -135,14 +135,14 @@
             bottom: 0;
             width: 100%;
             background-color: white;
-            opacity: 0.2;
-            text-align: left;
-            display: block;
+            /* opacity: 0.2; */
+            /* text-align: left; */
+            /* display: block; */
         }
     
-        .footer span,p{
+        /* .footer span, p{
             color: black;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -161,13 +161,19 @@
                         <img src="{{ asset('assets/images/post2.jpg') }}" width="250px" height="250px" class="m-1">
                         <img src="{{ asset('assets/images/post1.jpg') }}" width="250px" height="250px" class="m-1">
                     </div>
-                    <div class="footer">
-                        <i class="fa fa-address-book"></i>
-                        <span>+91 63566 10101</span>
-                        <i class="fa fa-globe"></i>
-                        <span>www.pukkamedia.com</span>
-                        <i class="fa fa-envelope"></i>
-                        <p>pukkamediaagency@gmail.com</p>
+                    <div class="footer d-flex flex-col">
+                        <div>
+                            <i class="fa fa-address-book"></i>
+                            <span>+91 63566 10101</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-globe"></i>
+                            <span>www.pukkamedia.com</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-envelope"></i>
+                            <p>pukkamediaagency@gmail.com</p>
+                        </div>
                         <p>All Rights Reserved by <a href="https://www.pukka.cypherocean.com" target="_blank">Pukka Media</a></p>
                     </div>
                 </div>
