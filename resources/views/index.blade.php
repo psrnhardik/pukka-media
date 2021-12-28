@@ -46,6 +46,16 @@
                 height: 270px !important;
                 margin-top: -105px !important;
             }
+
+            .backgroundVideo {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
         }
     </style>
 </head>
