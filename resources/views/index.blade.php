@@ -8,13 +8,23 @@
     <title>Pukka Media</title>
 
     <style>
-        .backgroundVideo {
+        .video_contain {
             position: fixed;
-            right: 0;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
             bottom: 0;
-            min-width: 100%;
+            right: 0;
+            left: 0;
+            margin: auto;
             min-height: 100%;
-            background-position: center center;
+            min-width: 100%;
         }
 
         .content {
@@ -47,13 +57,26 @@
                 height: 270px !important;
                 margin-top: -105px !important;
             }
+
+            video {
+                position: absolute;
+                top: -50%;
+                bottom: 0;
+                right: 0;
+                left: -50%;
+                margin: auto;
+                min-height: 100%;
+                min-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <video autoplay muted loop class="backgroundVideo">
-        <source type="video/mp4" src="{{ asset('assets/video/firework.mp4') }}" />
-    </video>
+    <div class="video_contain">
+        <video autoplay muted loop>
+            <source type="video/mp4" src="{{ asset('assets/video/firework.mp4') }}" />
+        </video>
+    </div>
 
     <div class="content d-flex flex-column justify-content-center align-items-center min-vw-100 min-vh-100">
         <img src="{{ asset('assets/images/logo.png') }}" class="main-image" alt="Pukka Media" style="height: 300px; width:auto; filter: invert(100%); margin-bottom: -4%; margin-top: 0%; position: relative;" />
