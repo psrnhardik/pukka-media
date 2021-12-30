@@ -71,7 +71,7 @@
                 margin-top: -105px !important;
             }
 
-            video {
+            /* video {
                 position: absolute;
                 top: -50%;
                 bottom: 0;
@@ -80,7 +80,7 @@
                 margin: auto;
                 min-height: 100%;
                 min-width: 100%;
-            }
+            } */
         }
     </style>
 </head>
