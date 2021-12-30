@@ -109,7 +109,7 @@
 
             <center>
 				<h3>Get your FREE New Year Post just fill in the following details</h3>
-				<h5>We will send your custom designed post soon via WhatsApp or Email</h5>
+				<h5>Enter your details and download the image now</h5>
 			</center>
 
             <div class="row">
