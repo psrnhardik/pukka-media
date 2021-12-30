@@ -13,8 +13,7 @@
         }
         .video_contain {
             position: fixed;
-            top: -50%;
-            left: -50%;
+             
             width: 200%;
             height: 200%;
         }
@@ -28,6 +27,16 @@
             margin: auto;
             min-height: 100%;
             min-width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            z-index: 0;
         }
 
         .content {
@@ -37,6 +46,7 @@
             background: rgba(0, 0, 0, 0.5);
             color: #f1f1f1;
             width: 100%;
+            padding-bottom: 60px;
         }
 
         .footer {
