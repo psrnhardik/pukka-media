@@ -81,7 +81,7 @@
     <div class="content d-flex flex-column justify-content-center align-items-center min-vw-100 min-vh-100">
         <img src="{{ asset('assets/images/logo.png') }}" class="main-image" alt="Pukka Media" style="height: 300px; width:auto; filter: invert(100%); margin-bottom: -4%; margin-top: 0%; position: relative;" />
         <h1 style="font-size: 60px; font-family: Pacifico !importent;" class="h1 text-white font-weight-bold text-center">We are Pukka Media</h1>
-        <a href="{{ route('contact') }}" type="button" class="text-white m-3 btn btn-danger btn-2x px-3 py-3">Get a FREE Christmas Image</a>
+        <a href="{{ route('contact') }}" type="button" class="text-white m-3 btn btn-danger btn-2x px-3 py-3">Get a FREE New Year Image</a>
     </div>
 
     <footer class="footer d-flex align-items-center justify-content-between flex-column flex-sm-row flex-md-row px-5 py-2">

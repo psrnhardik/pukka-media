@@ -108,7 +108,7 @@
             @method('POST')
 
             <center>
-				<h3>Get your FREE Diwali Post just fill in the following details</h3>
+				<h3>Get your FREE New Year Post just fill in the following details</h3>
 				<h5>We will send your custom designed post soon via WhatsApp or Email</h5>
 			</center>
 
