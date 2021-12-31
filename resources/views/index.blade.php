@@ -98,8 +98,8 @@
             <a href="{{ route('contact') }}" type="button" class="text-white m-3 btn btn-danger btn-2x px-3 py-3">Get a FREE New Year Image</a>
             <h1 class="text-center">Sample Images</h1>
             <div class="d-flex  justify-content-center align-items-center">
-                <img src="{{ asset('assets/images/one.jpg') }}" width="100px" alt="">
-                <img src="{{ asset('assets/images/two.jpg') }}" width="100px" alt="">
+                <img src="{{ asset('assets/images/one.jpg') }}" width="150px" class="m-1" alt="">
+                <img src="{{ asset('assets/images/two.jpg') }}" width="150px" class="m-1" alt="">
             </div>
         </div>
         
